@@ -1,0 +1,21 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+  <button class="navbar-toggler navbar-toggler-right"
+          type="button"
+          (click)="isNavDown = !isNavDown">
+    <i class="fa fa-bars" *ngIf="!isNavDown"></i>
+    <i class="fa fa-times" *ngIf="isNavDown"></i>
+  </button>
+  <a class="navbar-brand" (click)="navClick()" routerLink="/" routerLinkActive="active">Allan Chadwick</a>
+  <div [ngbCollapse]="!isNavDown" class="collapse navbar-collapse">
+    <div class="navbar-nav" (click)="navClick()">
+      <a class="nav-item nav-link" routerLink="/DeveloperBlog" routerLinkActive="active">Developer Blog</a>
+      <a class="nav-item nav-link" routerLink="/ElectronicsBlog" routerLinkActive="active">Electronics Blog</a>
+      <a class="nav-item nav-link" routerLink="/MusicBlog" routerLinkActive="active">Music Blog</a>
+      <a class="nav-link nav-link" href="http://stackoverflow.com/users/697660/thedev6">
+        <i class="fa fa-stack-overflow"></i> Stackoverflow
+      </a>
+      <a class="nav-item nav-link" href="https://github.com/thedev6"><i class="fa fa-github"></i> GitHub</a>
+      <a class="nav-item nav-link" href="http://www.nuget.org/packages?q=thedev6"><i class="fa fa-cube"></i> Nuget</a>
+    </div>
+  </div>
+</nav>
